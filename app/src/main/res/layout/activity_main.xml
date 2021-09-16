@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/main_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="50dp"
+        android:contentDescription="@string/main_image"
+        android:foreground="@drawable/rectangle"
+        android:src="@drawable/images"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501" />
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/deltalogo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/logo_iv" />
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/logo_iv"
+        app:layout_constraintBottom_toTopOf="@id/main_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:text="@string/passenger_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginHorizontal="20sp"
+            android:textSize="16sp"
+            android:text="@string/Name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="246dp"
+        app:layout_constraintStart_toStartOf="@id/guideline" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="300dp"
+        app:layout_constraintStart_toStartOf="@id/guideline" />
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow"
+            app:flow_verticalGap="10dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+            app:layout_constraintTop_toTopOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="country_tv,NY_tv,depart_tv,timedepart">
+
+    </androidx.constraintlayout.helper.widget.Flow>
+
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow2"
+        app:flow_verticalGap="10dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="@id/guideline2"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="country_tv2,Seattle_tv,depart_tv2,timedepart2">
+
+    </androidx.constraintlayout.helper.widget.Flow>
+
+
+
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@id/flow2"
+        android:id="@+id/country_tv2"
+            android:fontFamily="sans-serif-thin"
+            android:textSize="45sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sea_tv"
+            android:textColor="@color/white"
+             />
+
+
+        <TextView
+           app:layout_constraintStart_toStartOf="@id/flow2"
+            android:id="@+id/Seattle_tv"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seattle_tv"
+            android:textColor="@color/darkblue"
+            />
+
+
+        <TextView
+           app:layout_constraintStart_toStartOf="@id/flow2"
+            android:id="@+id/depart_tv2"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arrive_tv"
+            android:textColor="@color/white"
+            />
+
+
+        <TextView
+            android:id="@+id/timedepart2"
+            android:fontFamily="sans-serif-thin"
+            android:textAllCaps="true"
+            android:textSize="35sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time_tv"
+            android:textColor="@color/white"
+            />
+
+
+    <TextView
+        android:id="@+id/country_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/jfk_tv"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tools:layout_editor_absoluteY="273dp" />
+
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        android:id="@+id/NY_tv"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_york_city_tv"
+        android:textColor="@color/darkblue"
+        />
+
+
+    <TextView
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        android:id="@+id/depart_tv"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/depart_tv"
+        android:textColor="@color/white"
+        />
+
+
+    <TextView
+
+        android:id="@+id/timedepart"
+        android:fontFamily="sans-serif-thin"
+        android:textAllCaps="true"
+        android:textSize="35sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time2_tv"
+        android:textColor="@color/white"
+        />
+
+
+    <LinearLayout
+       android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/main_image"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:textColor="@color/gray"
+            android:textAllCaps="true"
+            android:text="@string/boarding_begins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:text="@string/_7_30_am"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textColor="@color/gray"
+            android:textAllCaps="true"
+            android:text="@string/gate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:text="@string/d4"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textColor="@color/gray"
+            android:textAllCaps="true"
+            android:text="@string/seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:text="@string/_3c"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/main_image"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:textColor="@color/gray"
+            android:textAllCaps="true"
+            android:text="@string/flight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:text="@string/d2218"
+            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:src="@drawable/qrcode"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+
+
+
+    </LinearLayout>
+
+
+    <ImageView
+       android:layout_marginBottom="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/main_image"
+        app:layout_constraintBottom_toBottomOf="@id/main_image"
+        android:id="@+id/airplane"
+        android:src="@drawable/airplane"
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

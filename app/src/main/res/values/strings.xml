@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Android1.1.H</string>
+    <string name="main_image">Main_image</string>
+    <string name="logo_iv">Logo_iv</string>
+    <string name="passenger_tv">Passenger</string>
+    <string name="Name_tv">Zharkynai Bakirova</string>
+    <string name="sea_tv">SEA</string>
+    <string name="seattle_tv">Seattle</string>
+    <string name="arrive_tv">arrive</string>
+    <string name="time_tv">11:17AM</string>
+    <string name="jfk_tv">JFK</string>
+    <string name="new_york_city_tv">New york city</string>
+    <string name="depart_tv">depart</string>
+    <string name="time2_tv">8:00AM</string>
+    <string name="boarding_begins">Boarding begins</string>
+    <string name="_7_30_am">7:30 AM</string>
+    <string name="gate">gate</string>
+    <string name="d4">D4</string>
+    <string name="seat">seat</string>
+    <string name="_3c">3c</string>
+    <string name="flight">flight</string>
+    <string name="d2218">D2218</string>
+</resources>
